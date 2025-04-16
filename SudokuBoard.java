@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SudokuBoard {
-    private char[][] board;
+    private char[][] board = new char[9][9];
 
     public SudokuBoard(String fileName){
         try {
@@ -25,6 +25,7 @@ public class SudokuBoard {
             System.out.println(fileName + " does not meet format expectations.");
         }
     }
+
 
     @Override
     public String toString() {
