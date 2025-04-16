@@ -4,9 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SudokuBoard {
-    private char[][] board = new char[9][9];
+    private char[][] board;
 
     public SudokuBoard(String fileName){
+        board = new char[9][9];
         try {
             Scanner scanner = new Scanner(new File(fileName));
             int r = 0;
