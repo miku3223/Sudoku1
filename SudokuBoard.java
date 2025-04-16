@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SudokuBoard {
-    private char[][] board = new char[9][9];
+    private char[][] board;
 
     public SudokuBoard(String fileName){
         try {
@@ -26,14 +26,15 @@ public class SudokuBoard {
         }
     }
 
-
-    public String toString(char[][] board){
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                System.out.print(board[i][j] + " ");
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int r = 0; r < board.length; r++) {
+            for (int c = 0; c < board[0].length; c++) {
+                sb.append(board[r][c]).append(" ");
             }
-            System.out.println();
+            sb.append("\n");
         }
-        return "";
+        return sb.toString();
     }
 }
