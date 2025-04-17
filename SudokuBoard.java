@@ -34,8 +34,15 @@ public class SudokuBoard {
         for (int r = 0; r < board.length; r++) {
             for (int c = 0; c < board[0].length; c++) {
                 sb.append(board[r][c]).append(" ");
+                if (c == 2 || c == 5) {
+                    sb.append(' ');
+                    sb.append(' ');
+                }
             }
             sb.append("\n");
+            if (r == 2 || r == 5) {
+                sb.append('\n');
+            }
         }
         return sb.toString();
     }
